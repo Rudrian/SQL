@@ -22,6 +22,10 @@ morada VARCHAR(50),
 PRIMARY KEY(id)
 );
 
+ALTER TABLE pessoa RENAME COLUMN data_nasc to datanascimento;
+
+ALTER TABLE pessoa  DROP COLUMN morada;
+
 describe pessoa;
 
 CREATE TABLE tbfuncionarios (
@@ -49,4 +53,7 @@ ALTER TABLE tbfuncionarios RENAME TO tbfuncionario;
 ALTER TABLE tbfuncionario RENAME COLUMN Turno to turno;
 ALTER TABLE tbfuncionario RENAME COLUMN Guerra to area;
 ALTER TABLE tbfuncionario RENAME COLUMN Funcao to funcao;
+
+
+
 
